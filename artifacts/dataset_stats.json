@@ -1,0 +1,46 @@
+{
+  "validation_report": {
+    "total_records": 15335,
+    "columns_found": [
+      "prompt",
+      "label"
+    ],
+    "errors": [],
+    "warnings": [
+      "18 duplicate prompt(s) found",
+      "18 prompt(s) have conflicting labels"
+    ],
+    "class_distribution": {
+      "0": {
+        "count": 13850,
+        "name": "benign"
+      },
+      "2": {
+        "count": 1485,
+        "name": "jailbreak"
+      }
+    },
+    "duplicate_prompts": 18,
+    "conflicting_label_prompts": 18,
+    "prompt_length_stats": {
+      "min": 1,
+      "max": 32759,
+      "mean": 1726.3,
+      "median": 881.0,
+      "std": 2528.2
+    },
+    "missing_values": {
+      "prompt": 0,
+      "label": 0
+    }
+  },
+  "cleaning_report": {
+    "original_count": 15335,
+    "removed_null_prompts": 0,
+    "removed_empty_prompts": 0,
+    "removed_invalid_labels": 0,
+    "removed_null_labels": 0,
+    "final_count": 15335,
+    "removed_total": 0
+  }
+}
