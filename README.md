@@ -12,7 +12,6 @@
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.4+-F7931E?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Tests](https://img.shields.io/badge/Tests-51%20Passed-success?style=flat&logo=pytest&logoColor=white)](tests/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github&logoColor=white)](https://github.com/HVietHub/TF-IDF-Logistic-Regression)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](LICENSE)
 
 </div>
 
