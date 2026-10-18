@@ -1,0 +1,31 @@
+{
+  "random_seed": 42,
+  "requested_ratios": {
+    "train": 0.8,
+    "val": 0.1,
+    "test": 0.1
+  },
+  "actual_sizes": {
+    "train": 64996,
+    "val": 8125,
+    "test": 8125,
+    "total": 81246
+  },
+  "actual_ratios": {
+    "train": 0.8,
+    "val": 0.1,
+    "test": 0.1
+  },
+  "train_distribution": {
+    "0": 32498,
+    "1": 32498
+  },
+  "val_distribution": {
+    "0": 4062,
+    "1": 4063
+  },
+  "test_distribution": {
+    "0": 4063,
+    "1": 4062
+  }
+}

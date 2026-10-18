@@ -1,0 +1,42 @@
+{
+  "test_dataset": "C:\\Users\\FPT\\Desktop\\TF_IDF\\test.csv (Attack subset)",
+  "num_samples": 2276,
+  "accuracy": 0.89455,
+  "classification_report": {
+    "Prompt Injection (0)": {
+      "precision": 0.894829097283085,
+      "recall": 0.894829097283085,
+      "f1-score": 0.894829097283085,
+      "support": 1141.0
+    },
+    "Jailbreak (1)": {
+      "precision": 0.8942731277533039,
+      "recall": 0.8942731277533039,
+      "f1-score": 0.8942731277533039,
+      "support": 1135.0
+    },
+    "accuracy": 0.8945518453427065,
+    "macro avg": {
+      "precision": 0.8945511125181944,
+      "recall": 0.8945511125181944,
+      "f1-score": 0.8945511125181944,
+      "support": 2276.0
+    },
+    "weighted avg": {
+      "precision": 0.8945518453427065,
+      "recall": 0.8945518453427065,
+      "f1-score": 0.8945518453427065,
+      "support": 2276.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1021,
+      120
+    ],
+    [
+      120,
+      1015
+    ]
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "dataset": "Test",
+  "num_samples": 8125,
+  "accuracy": 0.97932,
+  "macro_precision": 0.97932,
+  "macro_recall": 0.97932,
+  "macro_f1": 0.97932,
+  "weighted_f1": 0.97932,
+  "per_class": {
+    "promptinjection": {
+      "precision": 0.97956,
+      "recall": 0.97908,
+      "f1-score": 0.97932,
+      "support": 4063
+    },
+    "jailbreak": {
+      "precision": 0.97908,
+      "recall": 0.97957,
+      "f1-score": 0.97933,
+      "support": 4062
+    }
+  },
+  "confusion_matrix": [
+    [
+      3978,
+      85
+    ],
+    [
+      83,
+      3979
+    ]
+  ],
+  "inference_time_seconds": 8.5112,
+  "inference_per_sample_ms": 1.0475
+}

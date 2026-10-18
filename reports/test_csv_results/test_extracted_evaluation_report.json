@@ -1,0 +1,59 @@
+{
+  "input_file": "C:\\Users\\FPT\\Desktop\\TF_IDF\\test_full.csv",
+  "extractor_script": "C:\\Users\\FPT\\Desktop\\TF_IDF\\extract_test_data.py",
+  "total_samples": 4558,
+  "binary_metrics": {
+    "benign": {
+      "precision": 0.6594333936106088,
+      "recall": 0.9588080631025416,
+      "f1-score": 0.7814285714285715,
+      "support": 2282.0
+    },
+    "attack": {
+      "precision": 0.9241935483870968,
+      "recall": 0.5035149384885764,
+      "f1-score": 0.6518771331058021,
+      "support": 2276.0
+    },
+    "accuracy": 0.7314611671785871,
+    "macro avg": {
+      "precision": 0.7918134709988528,
+      "recall": 0.731161500795559,
+      "f1-score": 0.7166528522671868,
+      "support": 4558.0
+    },
+    "weighted avg": {
+      "precision": 0.7916392102563496,
+      "recall": 0.7314611671785871,
+      "f1-score": 0.7167381208751219,
+      "support": 4558.0
+    }
+  },
+  "binary_roc_auc": 0.8142,
+  "attack_family_breakdown": {
+    "None": {
+      "total": 2282,
+      "pred_benign": 2188,
+      "pred_pi": 6,
+      "pred_jb": 88,
+      "attack_detected_count": 94,
+      "attack_detected_rate": 0.0412
+    },
+    "PI": {
+      "total": 1141,
+      "pred_benign": 949,
+      "pred_pi": 92,
+      "pred_jb": 100,
+      "attack_detected_count": 192,
+      "attack_detected_rate": 0.1683
+    },
+    "JB": {
+      "total": 1135,
+      "pred_benign": 181,
+      "pred_pi": 1,
+      "pred_jb": 953,
+      "attack_detected_count": 954,
+      "attack_detected_rate": 0.8405
+    }
+  }
+}

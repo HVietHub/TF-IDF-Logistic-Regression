@@ -1,0 +1,62 @@
+# ============================================================
+# Binary Classification Configuration: PI vs JB
+# Prompt Injection (0) vs Jailbreak (1)
+# ============================================================
+
+dataset:
+  path: "C:/Users/FPT/Desktop/TF_IDF/Dataset/Datasets_main/pi_vs_jb_dataset_v2.csv"
+  prompt_column: "prompt"
+  label_column: "label"
+
+labels:
+  0: "promptinjection"
+  1: "jailbreak"
+
+split:
+  train_ratio: 0.80
+  val_ratio: 0.10
+  test_ratio: 0.10
+  random_seed: 42
+
+preprocessing:
+  normalize_unicode: true
+  normalize_whitespace: true
+  normalize_line_endings: true
+  lowercase: true
+  remove_stopwords: false
+  stem: false
+  lemmatize: false
+
+tfidf_word:
+  analyzer: "word"
+  ngram_range: [1, 2]
+  max_features: 60000
+  sublinear_tf: true
+  min_df: 3
+  max_df: 0.85
+  strip_accents: null
+  lowercase: true
+  token_pattern: '(?u)\b\w+\b'
+
+tfidf_char:
+  analyzer: "char_wb"
+  ngram_range: [3, 5]
+  max_features: 60000
+  sublinear_tf: true
+  min_df: 5
+  max_df: 0.85
+  strip_accents: null
+  lowercase: true
+
+logistic_regression:
+  max_iter: 2000
+  class_weight: "balanced"
+  random_state: 42
+  solver: "lbfgs"
+  C: 1.0
+
+security_thresholds:
+  enabled: false
+
+artifacts_dir: "artifacts_pi_vs_jb"
+reports_dir: "reports_pi_vs_jb"

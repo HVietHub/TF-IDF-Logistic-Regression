@@ -1,0 +1,68 @@
+# ============================================================
+# Comprehensive Multi-Dataset Configuration
+# TF-IDF + Logistic Regression Pipeline
+# Anti-Memorization / Generalization Architecture
+# ============================================================
+
+dataset:
+  path: "C:/Users/FPT/Desktop/TF_IDF/Dataset/Datasets_main/comprehensive_dataset.csv"
+  prompt_column: "prompt"
+  label_column: "label"
+
+labels:
+  0: "benign"
+  1: "promptinjection"
+  2: "jailbreak"
+
+split:
+  train_ratio: 0.80
+  val_ratio: 0.10
+  test_ratio: 0.10
+  random_seed: 42
+
+preprocessing:
+  normalize_unicode: true
+  normalize_whitespace: true
+  normalize_line_endings: true
+  lowercase: true
+  remove_stopwords: false
+  stem: false
+  lemmatize: false
+
+# Experiment A — Word-level TF-IDF (Anti-overfitting: min_df=3, word tokens, lowercase)
+tfidf_word:
+  analyzer: "word"
+  ngram_range: [1, 2]
+  max_features: 75000
+  sublinear_tf: true
+  min_df: 3
+  max_df: 0.85
+  strip_accents: null
+  lowercase: true
+  token_pattern: '(?u)\b\w+\b'
+
+# Experiment B — Character-level TF-IDF (Subword boundary n-grams)
+tfidf_char:
+  analyzer: "char_wb"
+  ngram_range: [3, 5]
+  max_features: 75000
+  sublinear_tf: true
+  min_df: 5
+  max_df: 0.85
+  strip_accents: null
+  lowercase: true
+
+logistic_regression:
+  max_iter: 2000
+  class_weight: "balanced"
+  random_state: 42
+  solver: "lbfgs"
+  C: 1.0
+
+security_thresholds:
+  benign_allow_min: 0.70
+  attack_block_min: 0.60
+  enabled: true
+
+artifacts_dir: "artifacts"
+reports_dir: "reports"

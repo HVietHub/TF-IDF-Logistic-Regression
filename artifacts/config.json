@@ -1,6 +1,6 @@
 {
   "dataset": {
-    "path": "C:/Users/FPT/Desktop/Dataset/Datasets_main/dataset.csv",
+    "path": "C:/Users/FPT/Desktop/TF_IDF/Dataset/Datasets_main/comprehensive_dataset.csv",
     "prompt_column": "prompt",
     "label_column": "label"
   },
@@ -19,7 +19,7 @@
     "normalize_unicode": true,
     "normalize_whitespace": true,
     "normalize_line_endings": true,
-    "lowercase": false,
+    "lowercase": true,
     "remove_stopwords": false,
     "stem": false,
     "lemmatize": false
@@ -30,26 +30,26 @@
       1,
       2
     ],
-    "max_features": 100000,
+    "max_features": 75000,
     "sublinear_tf": true,
-    "min_df": 1,
-    "max_df": 1.0,
+    "min_df": 3,
+    "max_df": 0.85,
     "strip_accents": null,
-    "lowercase": false,
-    "token_pattern": "(?u)\\S+"
+    "lowercase": true,
+    "token_pattern": "(?u)\\b\\w+\\b"
   },
   "tfidf_char": {
     "analyzer": "char_wb",
     "ngram_range": [
-      2,
+      3,
       5
     ],
-    "max_features": 100000,
+    "max_features": 75000,
     "sublinear_tf": true,
-    "min_df": 2,
-    "max_df": 1.0,
+    "min_df": 5,
+    "max_df": 0.85,
     "strip_accents": null,
-    "lowercase": false
+    "lowercase": true
   },
   "logistic_regression": {
     "max_iter": 2000,

@@ -166,7 +166,6 @@ def build_logistic_regression(config: Dict) -> LogisticRegression:
         random_state=lr_cfg.get("random_state", 42),
         solver=lr_cfg.get("solver", "lbfgs"),
         C=lr_cfg.get("C", 1.0),
-        multi_class="multinomial",
     )
 
 

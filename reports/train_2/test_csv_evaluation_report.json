@@ -1,0 +1,122 @@
+{
+  "dataset_path": "C:\\Users\\FPT\\Desktop\\TF_IDF\\test.csv",
+  "total_samples": 4558,
+  "execution_summary": {
+    "preprocessing_seconds": 0.1909,
+    "inference_seconds": 8.1292,
+    "latency_ms_per_sample": 1.784,
+    "throughput_samples_per_sec": 560.7
+  },
+  "overall_metrics": {
+    "accuracy": 0.7093,
+    "macro_precision": 0.80799,
+    "macro_recall": 0.62636,
+    "macro_f1": 0.58908,
+    "weighted_precision": 0.77076,
+    "weighted_recall": 0.7093,
+    "weighted_f1": 0.63691
+  },
+  "binary_security_metrics": {},
+  "security_policy_evaluation": {
+    "thresholds": {
+      "benign_allow_min": 0.7,
+      "attack_block_min": 0.6
+    },
+    "decision_counts": {
+      "allow": 2929,
+      "block": 1080,
+      "review": 549
+    },
+    "crosstab": {
+      "allow": {
+        "benign": 2025,
+        "jailbreak": 91,
+        "promptinjection": 813
+      },
+      "block": {
+        "benign": 56,
+        "jailbreak": 911,
+        "promptinjection": 113
+      },
+      "review": {
+        "benign": 201,
+        "jailbreak": 133,
+        "promptinjection": 215
+      }
+    },
+    "benign_outcomes": {
+      "total": 2282,
+      "allowed_safe_pass": 2025,
+      "allowed_rate": 0.88738,
+      "sent_to_review": 201,
+      "review_rate": 0.08808,
+      "blocked_false_alarm": 56,
+      "false_alarm_rate": 0.02454
+    },
+    "attack_outcomes": {
+      "total": 1135,
+      "blocked_threat_intercepted": 911,
+      "block_rate": 0.80264,
+      "sent_to_review_mitigated": 133,
+      "review_rate": 0.11718,
+      "allowed_critical_leak": 91,
+      "leak_rate": 0.08018
+    },
+    "overall_threat_interception_rate": 0.91982
+  },
+  "classification_report": {
+    "benign": {
+      "precision": 0.6594333936106088,
+      "recall": 0.9588080631025416,
+      "f1-score": 0.7814285714285715,
+      "support": 2282.0
+    },
+    "promptinjection": {
+      "precision": 0.9292929292929293,
+      "recall": 0.08063102541630149,
+      "f1-score": 0.14838709677419354,
+      "support": 1141.0
+    },
+    "jailbreak": {
+      "precision": 0.8352322524101665,
+      "recall": 0.839647577092511,
+      "f1-score": 0.8374340949033392,
+      "support": 1135.0
+    },
+    "accuracy": 0.7093023255813954,
+    "macro avg": {
+      "precision": 0.8079861917712349,
+      "recall": 0.6263622218704513,
+      "f1-score": 0.5890832543687013,
+      "support": 4558.0
+    },
+    "weighted avg": {
+      "precision": 0.7707632389267618,
+      "recall": 0.7093023255813954,
+      "f1-score": 0.6369059620742967,
+      "support": 4558.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      2188,
+      6,
+      88
+    ],
+    [
+      949,
+      92,
+      100
+    ],
+    [
+      181,
+      1,
+      953
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "benign",
+    "promptinjection",
+    "jailbreak"
+  ]
+}

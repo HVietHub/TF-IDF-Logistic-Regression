@@ -1,33 +1,34 @@
 {
   "validation_report": {
-    "total_records": 15335,
+    "total_records": 74525,
     "columns_found": [
       "prompt",
       "label"
     ],
     "errors": [],
-    "warnings": [
-      "18 duplicate prompt(s) found",
-      "18 prompt(s) have conflicting labels"
-    ],
+    "warnings": [],
     "class_distribution": {
       "0": {
-        "count": 13850,
+        "count": 30362,
         "name": "benign"
       },
+      "1": {
+        "count": 13801,
+        "name": "promptinjection"
+      },
       "2": {
-        "count": 1485,
+        "count": 30362,
         "name": "jailbreak"
       }
     },
-    "duplicate_prompts": 18,
-    "conflicting_label_prompts": 18,
+    "duplicate_prompts": 0,
+    "conflicting_label_prompts": 0,
     "prompt_length_stats": {
       "min": 1,
-      "max": 32759,
-      "mean": 1726.3,
-      "median": 881.0,
-      "std": 2528.2
+      "max": 35999,
+      "mean": 998.6,
+      "median": 437.0,
+      "std": 1731.6
     },
     "missing_values": {
       "prompt": 0,
@@ -35,12 +36,12 @@
     }
   },
   "cleaning_report": {
-    "original_count": 15335,
+    "original_count": 74525,
     "removed_null_prompts": 0,
     "removed_empty_prompts": 0,
     "removed_invalid_labels": 0,
     "removed_null_labels": 0,
-    "final_count": 15335,
+    "final_count": 74525,
     "removed_total": 0
   }
 }

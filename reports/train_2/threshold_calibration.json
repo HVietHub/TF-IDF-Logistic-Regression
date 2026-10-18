@@ -1,0 +1,227 @@
+[
+  {
+    "benign_threshold": 0.5,
+    "attack_threshold": 0.3,
+    "allow_pct": 41.08,
+    "block_pct": 58.86,
+    "review_pct": 0.07,
+    "false_negative_rate": 3.601,
+    "false_positive_rate": 4.282
+  },
+  {
+    "benign_threshold": 0.5,
+    "attack_threshold": 0.4,
+    "allow_pct": 41.08,
+    "block_pct": 58.6,
+    "review_pct": 0.32,
+    "false_negative_rate": 3.601,
+    "false_positive_rate": 3.986
+  },
+  {
+    "benign_threshold": 0.5,
+    "attack_threshold": 0.5,
+    "allow_pct": 41.08,
+    "block_pct": 58.06,
+    "review_pct": 0.86,
+    "false_negative_rate": 3.601,
+    "false_positive_rate": 3.491
+  },
+  {
+    "benign_threshold": 0.5,
+    "attack_threshold": 0.6,
+    "allow_pct": 41.08,
+    "block_pct": 56.63,
+    "review_pct": 2.29,
+    "false_negative_rate": 3.601,
+    "false_positive_rate": 2.372
+  },
+  {
+    "benign_threshold": 0.5,
+    "attack_threshold": 0.7,
+    "allow_pct": 41.08,
+    "block_pct": 55.02,
+    "review_pct": 3.9,
+    "false_negative_rate": 3.601,
+    "false_positive_rate": 1.581
+  },
+  {
+    "benign_threshold": 0.6,
+    "attack_threshold": 0.3,
+    "allow_pct": 39.44,
+    "block_pct": 60.32,
+    "review_pct": 0.24,
+    "false_negative_rate": 2.559,
+    "false_positive_rate": 6.555
+  },
+  {
+    "benign_threshold": 0.6,
+    "attack_threshold": 0.4,
+    "allow_pct": 39.44,
+    "block_pct": 59.49,
+    "review_pct": 1.07,
+    "false_negative_rate": 2.559,
+    "false_positive_rate": 5.468
+  },
+  {
+    "benign_threshold": 0.6,
+    "attack_threshold": 0.5,
+    "allow_pct": 39.44,
+    "block_pct": 58.06,
+    "review_pct": 2.5,
+    "false_negative_rate": 2.559,
+    "false_positive_rate": 3.491
+  },
+  {
+    "benign_threshold": 0.6,
+    "attack_threshold": 0.6,
+    "allow_pct": 39.44,
+    "block_pct": 56.63,
+    "review_pct": 3.93,
+    "false_negative_rate": 2.559,
+    "false_positive_rate": 2.372
+  },
+  {
+    "benign_threshold": 0.6,
+    "attack_threshold": 0.7,
+    "allow_pct": 39.44,
+    "block_pct": 55.02,
+    "review_pct": 5.54,
+    "false_negative_rate": 2.559,
+    "false_positive_rate": 1.581
+  },
+  {
+    "benign_threshold": 0.7,
+    "attack_threshold": 0.3,
+    "allow_pct": 37.63,
+    "block_pct": 61.42,
+    "review_pct": 0.95,
+    "false_negative_rate": 1.744,
+    "false_positive_rate": 8.597
+  },
+  {
+    "benign_threshold": 0.7,
+    "attack_threshold": 0.4,
+    "allow_pct": 37.63,
+    "block_pct": 59.49,
+    "review_pct": 2.89,
+    "false_negative_rate": 1.744,
+    "false_positive_rate": 5.468
+  },
+  {
+    "benign_threshold": 0.7,
+    "attack_threshold": 0.5,
+    "allow_pct": 37.63,
+    "block_pct": 58.06,
+    "review_pct": 4.31,
+    "false_negative_rate": 1.744,
+    "false_positive_rate": 3.491
+  },
+  {
+    "benign_threshold": 0.7,
+    "attack_threshold": 0.6,
+    "allow_pct": 37.63,
+    "block_pct": 56.63,
+    "review_pct": 5.74,
+    "false_negative_rate": 1.744,
+    "false_positive_rate": 2.372
+  },
+  {
+    "benign_threshold": 0.7,
+    "attack_threshold": 0.7,
+    "allow_pct": 37.63,
+    "block_pct": 55.02,
+    "review_pct": 7.35,
+    "false_negative_rate": 1.744,
+    "false_positive_rate": 1.581
+  },
+  {
+    "benign_threshold": 0.8,
+    "attack_threshold": 0.3,
+    "allow_pct": 35.2,
+    "block_pct": 61.42,
+    "review_pct": 3.38,
+    "false_negative_rate": 0.974,
+    "false_positive_rate": 8.597
+  },
+  {
+    "benign_threshold": 0.8,
+    "attack_threshold": 0.4,
+    "allow_pct": 35.2,
+    "block_pct": 59.49,
+    "review_pct": 5.31,
+    "false_negative_rate": 0.974,
+    "false_positive_rate": 5.468
+  },
+  {
+    "benign_threshold": 0.8,
+    "attack_threshold": 0.5,
+    "allow_pct": 35.2,
+    "block_pct": 58.06,
+    "review_pct": 6.74,
+    "false_negative_rate": 0.974,
+    "false_positive_rate": 3.491
+  },
+  {
+    "benign_threshold": 0.8,
+    "attack_threshold": 0.6,
+    "allow_pct": 35.2,
+    "block_pct": 56.63,
+    "review_pct": 8.17,
+    "false_negative_rate": 0.974,
+    "false_positive_rate": 2.372
+  },
+  {
+    "benign_threshold": 0.8,
+    "attack_threshold": 0.7,
+    "allow_pct": 35.2,
+    "block_pct": 55.02,
+    "review_pct": 9.78,
+    "false_negative_rate": 0.974,
+    "false_positive_rate": 1.581
+  },
+  {
+    "benign_threshold": 0.9,
+    "attack_threshold": 0.3,
+    "allow_pct": 29.87,
+    "block_pct": 61.42,
+    "review_pct": 8.71,
+    "false_negative_rate": 0.43,
+    "false_positive_rate": 8.597
+  },
+  {
+    "benign_threshold": 0.9,
+    "attack_threshold": 0.4,
+    "allow_pct": 29.87,
+    "block_pct": 59.49,
+    "review_pct": 10.64,
+    "false_negative_rate": 0.43,
+    "false_positive_rate": 5.468
+  },
+  {
+    "benign_threshold": 0.9,
+    "attack_threshold": 0.5,
+    "allow_pct": 29.87,
+    "block_pct": 58.06,
+    "review_pct": 12.06,
+    "false_negative_rate": 0.43,
+    "false_positive_rate": 3.491
+  },
+  {
+    "benign_threshold": 0.9,
+    "attack_threshold": 0.6,
+    "allow_pct": 29.87,
+    "block_pct": 56.63,
+    "review_pct": 13.5,
+    "false_negative_rate": 0.43,
+    "false_positive_rate": 2.372
+  },
+  {
+    "benign_threshold": 0.9,
+    "attack_threshold": 0.7,
+    "allow_pct": 29.87,
+    "block_pct": 55.02,
+    "review_pct": 15.11,
+    "false_negative_rate": 0.43,
+    "false_positive_rate": 1.581
+  }
+]

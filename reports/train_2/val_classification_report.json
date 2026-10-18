@@ -1,0 +1,50 @@
+{
+  "dataset": "Validation",
+  "num_samples": 7452,
+  "accuracy": 0.96001,
+  "macro_precision": 0.96423,
+  "macro_recall": 0.96346,
+  "macro_f1": 0.9638,
+  "weighted_f1": 0.96003,
+  "per_class": {
+    "benign": {
+      "precision": 0.9456,
+      "recall": 0.96179,
+      "f1-score": 0.95363,
+      "support": 3036
+    },
+    "promptinjection": {
+      "precision": 0.98255,
+      "recall": 0.97899,
+      "f1-score": 0.98076,
+      "support": 1380
+    },
+    "jailbreak": {
+      "precision": 0.96454,
+      "recall": 0.9496,
+      "f1-score": 0.95701,
+      "support": 3036
+    }
+  },
+  "confusion_matrix": [
+    [
+      2920,
+      16,
+      100
+    ],
+    [
+      23,
+      1351,
+      6
+    ],
+    [
+      145,
+      8,
+      2883
+    ]
+  ],
+  "inference_time_seconds": 8.3466,
+  "inference_per_sample_ms": 1.1201,
+  "experiment_name": "C_combined_tfidf",
+  "train_time_seconds": 100.004
+}

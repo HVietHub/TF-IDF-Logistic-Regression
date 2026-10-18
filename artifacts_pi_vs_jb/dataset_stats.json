@@ -1,0 +1,43 @@
+{
+  "validation_report": {
+    "total_records": 81246,
+    "columns_found": [
+      "prompt",
+      "label"
+    ],
+    "errors": [],
+    "warnings": [],
+    "class_distribution": {
+      "0": {
+        "count": 40623,
+        "name": "benign"
+      },
+      "1": {
+        "count": 40623,
+        "name": "promptinjection"
+      }
+    },
+    "duplicate_prompts": 0,
+    "conflicting_label_prompts": 0,
+    "prompt_length_stats": {
+      "min": 5,
+      "max": 55153,
+      "mean": 1041.4,
+      "median": 500.0,
+      "std": 1751.0
+    },
+    "missing_values": {
+      "prompt": 0,
+      "label": 0
+    }
+  },
+  "cleaning_report": {
+    "original_count": 81246,
+    "removed_null_prompts": 0,
+    "removed_empty_prompts": 0,
+    "removed_invalid_labels": 0,
+    "removed_null_labels": 0,
+    "final_count": 81246,
+    "removed_total": 0
+  }
+}

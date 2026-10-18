@@ -1,0 +1,58 @@
+{
+  "dataset": "C:\\Users\\FPT\\Desktop\\TF_IDF\\test_unseen_pi_vs_jb.csv",
+  "total_samples": 4926,
+  "accuracy": 0.89708,
+  "macro_precision": 0.89969,
+  "macro_recall": 0.89708,
+  "macro_f1": 0.89691,
+  "weighted_f1": 0.89691,
+  "inference_time_seconds": 14.3134,
+  "inference_per_sample_ms": 2.9057,
+  "classification_report": {
+    "Prompt Injection (0)": {
+      "precision": 0.9319787985865724,
+      "recall": 0.8566788469346326,
+      "f1-score": 0.8927438121430082,
+      "support": 2463.0
+    },
+    "Jailbreak (1)": {
+      "precision": 0.8673929376408716,
+      "recall": 0.9374746244417377,
+      "f1-score": 0.9010731707317073,
+      "support": 2463.0
+    },
+    "accuracy": 0.8970767356881851,
+    "macro avg": {
+      "precision": 0.899685868113722,
+      "recall": 0.8970767356881851,
+      "f1-score": 0.8969084914373577,
+      "support": 4926.0
+    },
+    "weighted avg": {
+      "precision": 0.8996858681137221,
+      "recall": 0.8970767356881851,
+      "f1-score": 0.8969084914373577,
+      "support": 4926.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      2110,
+      353
+    ],
+    [
+      154,
+      2309
+    ]
+  ],
+  "confusion_matrix_pct": [
+    [
+      85.66788469346326,
+      14.332115306536744
+    ],
+    [
+      6.252537555826228,
+      93.74746244417376
+    ]
+  ]
+}

@@ -1,0 +1,4 @@
+experiment,accuracy,macro_precision,macro_recall,macro_f1,weighted_f1,train_time_s,inference_time_s,recall_benign,f1_benign,recall_promptinjection,f1_promptinjection,recall_jailbreak,f1_jailbreak
+A_word_tfidf,0.95196,0.95592,0.95556,0.95564,0.95199,19.991,1.3867,0.95685,0.94502,0.97174,0.97209,0.93808,0.94981
+B_char_tfidf,0.95102,0.95535,0.95545,0.95533,0.95104,76.374,7.6962,0.9529,0.94327,0.97536,0.97466,0.93808,0.94807
+C_combined_tfidf,0.96001,0.96423,0.96346,0.9638,0.96003,100.004,8.3466,0.96179,0.95363,0.97899,0.98076,0.9496,0.95701

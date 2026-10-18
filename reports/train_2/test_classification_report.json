@@ -1,0 +1,48 @@
+{
+  "dataset": "Test",
+  "num_samples": 7453,
+  "accuracy": 0.95894,
+  "macro_precision": 0.96237,
+  "macro_recall": 0.96298,
+  "macro_f1": 0.96266,
+  "weighted_f1": 0.95895,
+  "per_class": {
+    "benign": {
+      "precision": 0.94744,
+      "recall": 0.95555,
+      "f1-score": 0.95148,
+      "support": 3037
+    },
+    "promptinjection": {
+      "precision": 0.97762,
+      "recall": 0.98116,
+      "f1-score": 0.97939,
+      "support": 1380
+    },
+    "jailbreak": {
+      "precision": 0.96206,
+      "recall": 0.95224,
+      "f1-score": 0.95713,
+      "support": 3036
+    }
+  },
+  "confusion_matrix": [
+    [
+      2902,
+      23,
+      112
+    ],
+    [
+      24,
+      1354,
+      2
+    ],
+    [
+      137,
+      8,
+      2891
+    ]
+  ],
+  "inference_time_seconds": 8.4621,
+  "inference_per_sample_ms": 1.1354
+}

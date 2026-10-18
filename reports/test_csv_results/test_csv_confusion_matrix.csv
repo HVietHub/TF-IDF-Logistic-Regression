@@ -1,0 +1,4 @@
+,pred_benign,pred_promptinjection,pred_jailbreak
+true_benign,2188,6,88
+true_promptinjection,949,92,100
+true_jailbreak,181,1,953
