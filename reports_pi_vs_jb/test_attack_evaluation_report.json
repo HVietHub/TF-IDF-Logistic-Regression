@@ -1,5 +1,5 @@
 {
-  "test_dataset": "C:\\Users\\FPT\\Desktop\\TF_IDF\\test.csv (Attack subset)",
+  "test_dataset": "data/test.csv (Attack subset)",
   "num_samples": 2276,
   "accuracy": 0.89455,
   "classification_report": {

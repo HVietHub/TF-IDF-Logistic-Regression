@@ -19,13 +19,14 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     except Exception:
         pass
 
-sys.path.insert(0, r"C:\Users\FPT\Desktop\TF_IDF\tf-idf\src")
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
 from preprocessing import preprocess_text
 
 def run_evaluation():
-    model_path = Path(r"C:\Users\FPT\Desktop\TF_IDF\tf-idf\artifacts_pi_vs_jb\model.joblib")
-    test_csv_path = Path(r"C:\Users\FPT\Desktop\TF_IDF\test_unseen_pi_vs_jb.csv")
-    output_report_path = Path(r"C:\Users\FPT\Desktop\TF_IDF\tf-idf\reports_pi_vs_jb\test_unseen_detailed_report.json")
+    model_path = REPO_ROOT / "artifacts_pi_vs_jb" / "model.joblib"
+    test_csv_path = REPO_ROOT / "data" / "test_unseen_pi_vs_jb.csv"
+    output_report_path = REPO_ROOT / "reports_pi_vs_jb" / "test_unseen_detailed_report.json"
 
     print(f"Loading model: {model_path}")
     model = joblib.load(model_path)

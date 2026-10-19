@@ -31,11 +31,11 @@ def collect_all_previous_keys() -> set:
     """Collect all keys that have EVER been used in training or existing test sets."""
     all_keys = set()
     files_to_check = [
-        r"C:\Users\FPT\Desktop\TF_IDF\Dataset\Datasets_main\comprehensive_dataset.csv",
-        r"C:\Users\FPT\Desktop\TF_IDF\Dataset\Datasets_main\pi_vs_jb_dataset.csv",
-        r"C:\Users\FPT\Desktop\TF_IDF\Dataset\Datasets_main\pi_vs_jb_dataset_v2.csv",
-        r"C:\Users\FPT\Desktop\TF_IDF\test.csv",
-        r"C:\Users\FPT\Desktop\TF_IDF\test.jsonl",
+        "data/comprehensive_dataset.csv",
+        "data/pi_vs_jb_dataset.csv",
+        "data/pi_vs_jb_dataset_v2.csv",
+        "data/test.csv",
+        "data/test.jsonl",
     ]
     for fp in files_to_check:
         if not os.path.exists(fp):
@@ -62,7 +62,7 @@ def collect_all_previous_keys() -> set:
     print(f"=> Total blacklist/previously used keys to exclude: {len(all_keys):,}")
     return all_keys
 
-def build_new_test_dataset(output_path: str = r"C:\Users\FPT\Desktop\TF_IDF\test_unseen_pi_vs_jb.csv"):
+def build_new_test_dataset(output_path: str = "data/test_unseen_pi_vs_jb.csv"):
     blacklist = collect_all_previous_keys()
 
     pi_records = []
@@ -71,7 +71,7 @@ def build_new_test_dataset(output_path: str = r"C:\Users\FPT\Desktop\TF_IDF\test
     print("\n--- Collecting Prompt Injections from NEW repos ---")
 
     # 1. Nemotron
-    p_nemo = r"C:\Users\FPT\Desktop\TF_IDF\Dataset\Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1\train.jsonl"
+    p_nemo = os.path.join("..", "Dataset", "Nemotron-RL-Agentic-Indirect-Prompt-Injection-v1", "train.jsonl")
     if os.path.exists(p_nemo):
         with open(p_nemo, "r", encoding="utf-8") as f:
             for line in f:
@@ -92,7 +92,7 @@ def build_new_test_dataset(output_path: str = r"C:\Users\FPT\Desktop\TF_IDF\test
         print(f"Nemotron: collected {len(pi_records):,} PI samples.")
 
     # 2. CyberSecEval3 Visual Prompt Injection
-    p_cyber = r"C:\Users\FPT\Desktop\TF_IDF\Dataset\cyberseceval3-visual-prompt-injection\test_cases.json"
+    p_cyber = os.path.join("..", "Dataset", "cyberseceval3-visual-prompt-injection", "test_cases.json")
     if os.path.exists(p_cyber):
         c0 = len(pi_records)
         with open(p_cyber, "r", encoding="utf-8") as f:
@@ -119,7 +119,7 @@ def build_new_test_dataset(output_path: str = r"C:\Users\FPT\Desktop\TF_IDF\test
     target_count = len(df_pi)
 
     print("\n--- Collecting NEVER-BEFORE-USED Jailbreaks from JailbreakDB ---")
-    p_jb_db = r"C:\Users\FPT\Desktop\TF_IDF\Dataset\JailbreakDB\text_jailbreak_unique.csv"
+    p_jb_db = os.path.join("..", "Dataset", "JailbreakDB", "text_jailbreak_unique.csv")
     chunk_size = 50000
     for chunk in pd.read_csv(p_jb_db, chunksize=chunk_size, usecols=["user_prompt", "jailbreak", "source"], low_memory=False):
         sampled = chunk.groupby("source", group_keys=False).sample(frac=0.30, random_state=888)

@@ -177,14 +177,14 @@ def main():
         "--input",
         "-i",
         type=str,
-        default=r"C:\Users\FPT\Desktop\TF_IDF\test.jsonl",
+        default="data/test.jsonl",
         help="Path to input .jsonl file",
     )
     parser.add_argument(
         "--output",
         "-o",
         type=str,
-        default=r"C:\Users\FPT\Desktop\TF_IDF\test.csv",
+        default="data/test.csv",
         help="Path to output .csv file",
     )
     parser.add_argument(

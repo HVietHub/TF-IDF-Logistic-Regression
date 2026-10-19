@@ -1,6 +1,6 @@
 {
-  "input_file": "C:\\Users\\FPT\\Desktop\\TF_IDF\\test_full.csv",
-  "extractor_script": "C:\\Users\\FPT\\Desktop\\TF_IDF\\extract_test_data.py",
+  "input_file": "data/test_full.csv",
+  "extractor_script": "extract_test_data.py",
   "total_samples": 4558,
   "binary_metrics": {
     "benign": {

@@ -4,16 +4,19 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 import sys
-sys.path.insert(0, r"C:\Users\FPT\Desktop\TF_IDF\tf-idf\src")
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
 from preprocessing import preprocess_text
 
 # Load model
-model_path = r"C:\Users\FPT\Desktop\TF_IDF\tf-idf\artifacts_pi_vs_jb\model.joblib"
+model_path = REPO_ROOT / "artifacts_pi_vs_jb" / "model.joblib"
 model = joblib.load(model_path)
 print(f"Loaded model from: {model_path}")
 
 # Load test data
-test_path = r"C:\Users\FPT\Desktop\TF_IDF\test_unseen_pi_vs_jb.csv"
+test_path = REPO_ROOT / "data" / "test_unseen_pi_vs_jb.csv"
 df = pd.read_csv(test_path)
 print(f"Loaded test dataset: {len(df):,} samples")
 print("Label distribution:\n", df["label"].value_counts().to_dict())

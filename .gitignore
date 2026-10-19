@@ -67,3 +67,11 @@ venv.bak/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Heavy datasets and archives (prevent accidental commits > 100MB)
+Dataset/
+Datasets_main/
+*.zip
+*.tar.gz
+*.7z
+

@@ -33,10 +33,10 @@ def load_test_prompts(test_csv_path: str) -> set:
     return test_keys
 
 def build_pi_vs_jb_dataset(
-    dataset_dir: str = r"C:\Users\FPT\Desktop\TF_IDF\Dataset",
-    test_csv_path: str = r"C:\Users\FPT\Desktop\TF_IDF\test.csv",
-    output_path: str = r"C:\Users\FPT\Desktop\TF_IDF\Dataset\Datasets_main\pi_vs_jb_dataset.csv",
-    secondary_output: str = r"C:\Users\FPT\Desktop\TF_IDF\Dataset\pi_vs_jb_dataset.csv",
+    dataset_dir: str = "../Dataset",
+    test_csv_path: str = "data/test.csv",
+    output_path: str = "data/pi_vs_jb_dataset.csv",
+    secondary_output: str = "../Dataset/pi_vs_jb_dataset.csv",
     random_seed: int = 42,
 ):
     np.random.seed(random_seed)
@@ -89,7 +89,7 @@ def build_pi_vs_jb_dataset(
     # 4. Datasets_main (root and subfolder) for any label 1
     for p_dm in [
         os.path.join(dataset_dir, "Datasets_main", "dataset.csv"),
-        r"C:\Users\FPT\Desktop\TF_IDF\Datasets_main\dataset.csv",
+        os.path.join("data", "dataset.csv"),
     ]:
         if os.path.exists(p_dm):
             df_dm = pd.read_csv(p_dm, encoding="utf-8", encoding_errors="replace", low_memory=False)
@@ -99,7 +99,7 @@ def build_pi_vs_jb_dataset(
             print(f"datasets_main ({os.path.basename(p_dm)}): added {len(pi_records) - c0:,} PI samples.")
 
     # 5. Additional Prompt Injection from PIGuard train.json
-    p_piguard = r"C:\Users\FPT\Desktop\IAP\pi-guard\workspaces\vietpmh\Task Completed\Task Meeting 5\PIGuard\datasets\train.json"
+    p_piguard = os.environ.get("PIGUARD_TRAIN_JSON", "data/piguard_train.json")
     if os.path.exists(p_piguard):
         import json
         with open(p_piguard, "r", encoding="utf-8") as fp:
@@ -132,7 +132,7 @@ def build_pi_vs_jb_dataset(
     # 7. Datasets_main for label 2 (jailbreak)
     for p_dm in [
         os.path.join(dataset_dir, "Datasets_main", "dataset.csv"),
-        r"C:\Users\FPT\Desktop\TF_IDF\Datasets_main\dataset.csv",
+        os.path.join("data", "dataset.csv"),
     ]:
         if os.path.exists(p_dm):
             df_dm = pd.read_csv(p_dm, encoding="utf-8", encoding_errors="replace", low_memory=False)

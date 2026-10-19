@@ -4,7 +4,7 @@
 # ============================================================
 
 dataset:
-  path: "C:/Users/FPT/Desktop/TF_IDF/Dataset/Datasets_main/pi_vs_jb_dataset_v2.csv"
+  path: "data/pi_vs_jb_dataset_v2.csv"
   prompt_column: "prompt"
   label_column: "label"
 

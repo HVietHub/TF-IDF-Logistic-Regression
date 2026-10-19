@@ -1,5 +1,5 @@
 {
-  "dataset": "C:\\Users\\FPT\\Desktop\\TF_IDF\\test_unseen_pi_vs_jb.csv",
+  "dataset": "data/test_unseen_pi_vs_jb.csv",
   "total_samples": 4926,
   "accuracy": 0.89708,
   "macro_precision": 0.89969,

@@ -47,12 +47,12 @@ def load_previous_jb_prompts(prev_dataset_path: str) -> set:
     return prev_keys
 
 def build_v2_dataset(
-    dataset_dir: str = r"C:\Users\FPT\Desktop\TF_IDF\Dataset",
-    test_csv_path: str = r"C:\Users\FPT\Desktop\TF_IDF\test.csv",
-    prev_dataset_path: str = r"C:\Users\FPT\Desktop\TF_IDF\Dataset\Datasets_main\pi_vs_jb_dataset.csv",
-    output_path: str = r"C:\Users\FPT\Desktop\TF_IDF\Dataset\Datasets_main\pi_vs_jb_dataset_v2.csv",
-    primary_output: str = r"C:\Users\FPT\Desktop\TF_IDF\Dataset\Datasets_main\pi_vs_jb_dataset.csv",
-    secondary_output: str = r"C:\Users\FPT\Desktop\TF_IDF\Dataset\pi_vs_jb_dataset.csv",
+    dataset_dir: str = "../Dataset",
+    test_csv_path: str = "data/test.csv",
+    prev_dataset_path: str = "data/pi_vs_jb_dataset.csv",
+    output_path: str = "data/pi_vs_jb_dataset_v2.csv",
+    primary_output: str = "data/pi_vs_jb_dataset.csv",
+    secondary_output: str = "../Dataset/pi_vs_jb_dataset.csv",
     random_seed: int = 42,
 ):
     np.random.seed(random_seed)
@@ -141,7 +141,7 @@ def build_v2_dataset(
         print(f"prompt-injections: added {len(pi_records) - c0:,} PI samples.")
 
     # 6. PIGuard train.json
-    p_piguard = r"C:\Users\FPT\Desktop\IAP\pi-guard\workspaces\vietpmh\Task Completed\Task Meeting 5\PIGuard\datasets\train.json"
+    p_piguard = os.environ.get("PIGUARD_TRAIN_JSON", "data/piguard_train.json")
     if os.path.exists(p_piguard):
         import json
         with open(p_piguard, "r", encoding="utf-8") as fp:

@@ -5,7 +5,7 @@
 # ============================================================
 
 dataset:
-  path: "C:/Users/FPT/Desktop/TF_IDF/Dataset/Datasets_main/comprehensive_dataset.csv"
+  path: "data/comprehensive_dataset.csv"
   prompt_column: "prompt"
   label_column: "label"
 

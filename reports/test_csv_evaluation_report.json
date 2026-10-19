@@ -1,5 +1,5 @@
 {
-  "dataset_path": "C:\\Users\\FPT\\Desktop\\TF_IDF\\test.jsonl",
+  "dataset_path": "data/test.jsonl",
   "total_samples": 4558,
   "execution_summary": {
     "preprocessing_seconds": 0.1988,

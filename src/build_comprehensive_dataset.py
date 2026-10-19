@@ -1,7 +1,7 @@
 """
 Build Comprehensive Multi-Source Dataset
 ========================================
-Consolidates and balances all datasets in C:\\Users\\FPT\\Desktop\\TF_IDF\\Dataset
+Consolidates and balances all datasets in the project data directory
 into a single, high-quality, deduplicated dataset for training:
   - Class 0: benign
   - Class 1: promptinjection
@@ -36,9 +36,9 @@ def load_test_prompts(test_csv_path: str) -> set:
     return test_keys
 
 def build_dataset(
-    dataset_dir: str = r"C:\Users\FPT\Desktop\TF_IDF\Dataset",
-    test_csv_path: str = r"C:\Users\FPT\Desktop\TF_IDF\test.csv",
-    output_path: str = r"C:\Users\FPT\Desktop\TF_IDF\Dataset\Datasets_main\comprehensive_dataset.csv",
+    dataset_dir: str = "../Dataset",
+    test_csv_path: str = "data/test.csv",
+    output_path: str = "data/comprehensive_dataset.csv",
     max_jb_samples: int = 35000,
     max_reg_samples: int = 35000,
     random_seed: int = 42,
@@ -141,7 +141,7 @@ def build_dataset(
     # 5. Datasets_main (root and subfolder)
     for p_dm in [
         os.path.join(dataset_dir, "Datasets_main", "dataset.csv"),
-        r"C:\Users\FPT\Desktop\TF_IDF\Datasets_main\dataset.csv",
+        os.path.join("data", "dataset.csv"),
     ]:
         if os.path.exists(p_dm):
             df_dm = pd.read_csv(p_dm, encoding="utf-8", encoding_errors="replace", low_memory=False)

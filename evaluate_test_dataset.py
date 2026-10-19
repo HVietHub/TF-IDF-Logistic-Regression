@@ -464,7 +464,7 @@ def run_evaluation(
 
     # Print Full Console Summary
     print("\n" + "=" * 70)
-    print("      MODEL TEST REPORT: C:\\Users\\FPT\\Desktop\\TF_IDF\\test.csv")
+    print(f"      MODEL TEST REPORT: {Path(data_path).name}")
     print("=" * 70)
     print(f"Total Samples Evaluated: {len(df):,}")
     print(f"Inference Latency:       {ms_per_sample:.3f} ms/sample ({throughput:.1f} samples/sec)")
@@ -499,25 +499,25 @@ def main():
     parser.add_argument(
         "--data",
         type=str,
-        default=r"C:\Users\FPT\Desktop\TF_IDF\test.csv",
+        default="data/test.csv",
         help="Path to test CSV file",
     )
     parser.add_argument(
         "--model",
         type=str,
-        default=r"C:\Users\FPT\Desktop\TF_IDF\tf-idf\artifacts\model.joblib",
+        default="artifacts/model.joblib",
         help="Path to trained model pipeline (.joblib)",
     )
     parser.add_argument(
         "--labels",
         type=str,
-        default=r"C:\Users\FPT\Desktop\TF_IDF\tf-idf\artifacts\label_mapping.json",
+        default="artifacts/label_mapping.json",
         help="Path to label mapping JSON",
     )
     parser.add_argument(
         "--output-dir",
         type=str,
-        default=r"C:\Users\FPT\Desktop\TF_IDF\tf-idf\reports",
+        default="reports",
         help="Directory to save evaluation reports and plots",
     )
     parser.add_argument(
